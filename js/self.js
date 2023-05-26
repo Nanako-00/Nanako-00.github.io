@@ -216,7 +216,7 @@ function showWelcome (data) {
           }
           break
         case "浙江省":
-          posdesc = "东风渐绿西湖柳，雁已还人未南归。"
+          posdesc = "身在江南痴西湖，一湖烟雨入诗墨。"
           break
         case "安徽省":
           posdesc = "蚌埠住了，芜湖起飞。"
@@ -282,7 +282,7 @@ function showWelcome (data) {
           posdesc = "性感荷官，在线发牌。"
           break
         default:
-          posdesc = "社会主义大法好。"
+          posdesc = "愿世界和平，再无泪水！"
           break
       }
       break
@@ -294,18 +294,20 @@ function showWelcome (data) {
   //判断时间
   let timeChange
   let date = new Date()
-  if (date.getHours() >= 5 && date.getHours() < 11) timeChange = "<span>上午好</span>，一日之计在于晨"
-  else if (date.getHours() >= 1 && date.getHours() < 13) timeChange = "<span>中午好</span>，该摸鱼吃午饭了"
-  else if (date.getHours() >= 13 && date.getHours() < 15) timeChange = "<span>下午好</span>，懒懒地睡个午觉吧！"
-  else if (date.getHours() >= 15 && date.getHours() < 16) timeChange = "<span>三点几啦</span>，饮茶先啦！"
-  else if (date.getHours() >= 16 && date.getHours() < 19) timeChange = "<span>夕阳无限好！</span>"
-  else if (date.getHours() >= 19 && date.getHours() < 24) timeChange = "<span>晚上好</span>，夜生活嗨起来！"
-  else timeChange = "夜深了，早点休息，少熬夜"
-
+  if (date.getHours() >= 5 && date.getHours() < 11) timeChange = "<img class='icon' src='/icon/taiyang.png' /><span>上午好</span>，一日之计在于晨"
+  else if (date.getHours() >= 1 && date.getHours() < 13) timeChange = "<img class='icon' src='/icon/yu.png' /><span>中午好</span>，该摸鱼吃午饭了"
+  else if (date.getHours() >= 13 && date.getHours() < 15) timeChange = "<img class='icon' src='/icon/shuijiao.png' /><span>下午好</span>，懒懒地睡个午觉吧！"
+  else if (date.getHours() >= 15 && date.getHours() < 16) timeChange = "<img class='icon' src='/icon/naicha.png' /><span>三点几啦</span>，饮茶先啦！"
+  else if (date.getHours() >= 16 && date.getHours() < 19) timeChange = "<img class='icon' src='/icon/xiyang.png' /><span>夕阳无限好！</span>"
+  else if (date.getHours() >= 19 && date.getHours() < 24) timeChange = "<img class='icon' src='/icon/yemaozi.png' /><span>晚上好</span>，夜生活嗨起来！"
+  else timeChange = "<img class='icon' src='/icon/xiuxi.png' />夜深了，早点休息，少熬夜"
+  document.getElementsByClassName("item-headline")[0].innerHTML = `欢迎小伙伴!`
   document.getElementsByClassName("announcement_content")[0].innerHTML =
-    `欢迎来自<span>${pos}</span>的小伙伴，${timeChange}<br>
-  你距离Nanako约有<span>${dist}</span>公里，${posdesc}
-  <br>
+    `<div class='item'>
+    ${timeChange}!
+    </div>
+    <span style="color:#00FFFF">Nanako</span>距离你约有<span style="color:#00FFFF">${dist}</span>公里!<br/>
+    ${posdesc}
   `
 }
 //get请求
@@ -485,3 +487,33 @@ class Cursor {
   CURSOR = new Cursor()
   // 需要重新获取列表时，使用 CURSOR.refresh()
 })()
+
+// 博客失焦改变标题
+/* 去焦点 Start*/
+let urlList = []
+function handleVisibilityChange() {
+  if (document.visibilityState === 'hidden') {
+    if (!urlList.find( (item, index) => {
+      if (item.url === document.documentURI) return true
+    } )) {
+      urlList.push({
+        url: document.documentURI,
+        title: document.title
+      })
+      document.title = '๑ᵒᯅᵒ๑公子,来玩啊？'
+    }
+  } else {
+    urlList.find( (item, index) => {
+      if (item.url === document.documentURI) {
+        document.title = '公子，你来了！';
+        setTimeout(() => {
+          document.title = item.title;
+          urlList.splice(index, 1)
+        }, 2000)
+        return true
+      }
+    } )
+  }
+}
+
+document.addEventListener('visibilitychange', handleVisibilityChange, false);
