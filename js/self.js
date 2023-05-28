@@ -294,13 +294,13 @@ function showWelcome (data) {
   //判断时间
   let timeChange
   let date = new Date()
-  if (date.getHours() >= 5 && date.getHours() < 11) timeChange = "<img class='icon' src='/icon/taiyang.png' /><span>上午好</span>，一日之计在于晨"
-  else if (date.getHours() >= 1 && date.getHours() < 13) timeChange = "<img class='icon' src='/icon/yu.png' /><span>中午好</span>，该摸鱼吃午饭了"
-  else if (date.getHours() >= 13 && date.getHours() < 15) timeChange = "<img class='icon' src='/icon/shuijiao.png' /><span>下午好</span>，懒懒地睡个午觉吧！"
-  else if (date.getHours() >= 15 && date.getHours() < 16) timeChange = "<img class='icon' src='/icon/naicha.png' /><span>三点几啦</span>，饮茶先啦！"
-  else if (date.getHours() >= 16 && date.getHours() < 19) timeChange = "<img class='icon' src='/icon/xiyang.png' /><span>夕阳无限好！</span>"
-  else if (date.getHours() >= 19 && date.getHours() < 24) timeChange = "<img class='icon' src='/icon/yemaozi.png' /><span>晚上好</span>，夜生活嗨起来！"
-  else timeChange = "<img class='icon' src='/icon/xiuxi.png' />夜深了，早点休息，少熬夜"
+  if (date.getHours() >= 5 && date.getHours() < 11) timeChange = "<img class='icon' src='../icon/taiyang.png' /><span>上午好</span>，一日之计在于晨"
+  else if (date.getHours() >= 1 && date.getHours() < 13) timeChange = "<img class='icon' src='../icon/yu.png' /><span>中午好</span>，该摸鱼吃午饭了"
+  else if (date.getHours() >= 13 && date.getHours() < 15) timeChange = "<img class='icon' src='../icon/shuijue.png' /><span>下午好</span>，懒懒地睡个午觉吧！"
+  else if (date.getHours() >= 15 && date.getHours() < 16) timeChange = "<img class='icon' src='../icon/naicha.png' /><span>三点几啦</span>，饮茶先啦！"
+  else if (date.getHours() >= 16 && date.getHours() < 19) timeChange = "<img class='icon' src='../icon/xiyang.png' /><span>夕阳无限好！</span>"
+  else if (date.getHours() >= 19 && date.getHours() < 24) timeChange = "<img class='icon' src='../icon/yemaozi.png' /><span>晚上好</span>，夜生活嗨起来！"
+  else timeChange = "<img class='icon' src='../icon/xiuxi.png' />夜深了，早点休息，少熬夜"
   document.getElementsByClassName("item-headline")[0].innerHTML = `欢迎小伙伴!`
   document.getElementsByClassName("announcement_content")[0].innerHTML =
     `<div class='item'>
