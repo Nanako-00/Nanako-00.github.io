@@ -500,12 +500,12 @@ function handleVisibilityChange() {
         url: document.documentURI,
         title: document.title
       })
-      document.title = '๑ᵒᯅᵒ๑公子,来玩啊？'
+      document.title = 'o_o ....'
     }
   } else {
     urlList.find( (item, index) => {
       if (item.url === document.documentURI) {
-        document.title = '公子，你来了！';
+        document.title = '蛤蛤，上当了！';
         setTimeout(() => {
           document.title = item.title;
           urlList.splice(index, 1)
@@ -516,4 +516,4 @@ function handleVisibilityChange() {
   }
 }
 
-document.addEventListener('visibilitychange', handleVisibilityChange, false);
+document.addEventListener('visibilitychange', handleVisibilityChange, false)
