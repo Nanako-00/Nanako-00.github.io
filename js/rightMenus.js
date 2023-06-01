@@ -1,4 +1,4 @@
-let rm = {};
+let rm = {}
 rm.showRightMenu = function (isTrue, x = 0, y = 0) {
     let $rightMenu = $('#rightMenu');
     $rightMenu.css('top', x + 'px').css('left', y + 'px');
@@ -18,7 +18,7 @@ rm.reloadrmSize = function () {
 };
 window.oncontextmenu = function (event) {
     if (document.body.clientWidth > 768) {
-        let pageX = event.clientX + 10; 
+        let pageX = event.clientX + 10;
         let pageY = event.clientY;
         let $rightMenuNormal = $(".rightMenuNormal");
         let $rightMenuOther = $(".rightMenuOther");
