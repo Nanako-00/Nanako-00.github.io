@@ -10,17 +10,17 @@ categories:
 ## 检查有没有已有的sshkey
   - 如果有可以直接使用，如果没有则继续往下看
 ```shell
-  ls -al ~/.ssh 
+  ls -al ~/.ssh
 ```
 
 ## 生成sshkey
 
 - 执行命令配置name和email
 ```shell
-  git config –global user.name "你的name"
+  git config --global user.name "你的name"
 ```
 ```shell
-  git config –global user.email "你的邮箱"
+  git config --global user.email "你的邮箱"
 ```
 
 - 生成密钥
