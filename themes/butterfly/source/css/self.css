@@ -1,0 +1,160 @@
+/* 字体修改 */
+@font-face {
+  font-family: FZSJ; /* 自定义字体名称 */
+  font-display: swap;
+  src: url("../FZSJ-MINGYSJZ.TTF") format("truetype"); /* 引入字体文件的路径 */
+}
+/*应用在body体里，放在第一个，font-family会按顺序使用字体族。如果第一个没找到就会找第二个，以此类推。*/
+body {
+  font-family: FZSJ, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Helvetica Neue", Lato, Roboto, "PingFang SC", "STZhongsong",
+    "Lantinghei SC", sans-serif;
+  font-size: 18px;
+}
+
+/* 鼠标指针 */
+#cursor {
+  position: fixed;
+  width: 16px;
+  height: 16px;
+  background: #07eff3;
+  border-radius: 8px;
+  opacity: 0.8;
+  z-index: 10086;
+  pointer-events: none;
+  transition: 0.2s ease-in-out;
+  transition-property: background, opacity, transform;
+}
+
+#cursor.hidden {
+  opacity: 0;
+}
+
+#cursor.hover {
+  opacity: 0.1;
+  transform: scale(2.5);
+}
+
+#cursor.active {
+  opacity: 0.5;
+  transform: scale(0.5);
+}
+
+.announcement_content .item {
+  display: flex;
+  align-items: center;
+}
+.announcement_content .item .icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* 修改背景色渐变 */
+#web_bg {
+  /* webkit内核 5.1 - 6.0 */
+  background: -webkit-linear-gradient(left, #a8edea, #fed6e3);
+  /* Opera 11.1 - 12.0 */
+  background: -o-linear-gradient(right, #a8edea, #fed6e3);
+  /* Firefox 3.6 - 15 */
+  background: -moz-linear-gradient(right, #a8edea, #fed6e3);
+  /* 标准的语法 */
+  background: linear-gradient(to right, #a8edea, #fed6e3);
+}
+
+/* 右击样式 */
+/* rightMenu */
+#rightMenu {
+  display: none;
+  position: fixed;
+  padding: 0 .25rem;
+  width: 9rem;
+  height: fit-content;
+  top: 10%;
+  left: 10%;
+  background-color: rgba(238, 255, 255, .85);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  color: #363636;
+  border-radius: 12px;
+  z-index: 99994;
+  border: #e3e8f7;
+  user-select: none;
+  box-shadow: rgba(0, 0, 0, .05);
+}
+
+#rightMenu a {
+  color: #363636;
+}
+
+#rightMenu .rightMenu-group {
+  padding: .35rem .3rem;
+  transition: .3s
+}
+
+#rightMenu .rightMenu-line {
+  border-top: 1px dashed #4259ef23
+}
+
+#rightMenu .rightMenu-group.rightMenu-small {
+  display: flex;
+  justify-content: space-between
+}
+
+#rightMenu .rightMenu-group .rightMenu-item {
+  border-radius: 8px;
+  transition: .3s;
+  cursor: pointer
+}
+
+#rightMenu .rightMenu-line .rightMenu-item {
+  margin: .25rem 0;
+  padding: .25rem 0
+}
+
+#rightMenu .rightMenu-group.rightMenu-line .rightMenu-item {
+  display: flex
+}
+
+#rightMenu .rightMenu-group .rightMenu-item:hover {
+  background-color: #6f42c1;
+  color: #fff;
+}
+
+#rightMenu .rightMenu-group .rightMenu-item:active {
+  transform: scale(.97)
+}
+
+#rightMenu .rightMenu-group .rightMenu-item i {
+  display: inline-block;
+  text-align: center;
+  line-height: 1.5rem;
+  width: 1.5rem;
+  padding: 0 .25rem
+}
+
+#rightMenu .rightMenu-line .rightMenu-item i {
+  margin: 0 .25rem
+}
+
+#rightMenu .rightMenu-group .rightMenu-item span {
+  line-height: 1.5rem
+}
+
+.rightMenu-small .rightMenu-item {
+  width: 30px;
+  height: 30px;
+  line-height: 30px
+}
+
+#rightmenu-mask {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: 0 0;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 101;
+  margin: 0 !important;
+  z-index: 99993
+}
