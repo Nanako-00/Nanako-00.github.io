@@ -16,7 +16,6 @@ categories:
  - 声明式编程：React 采用声明式编程模型，开发者只需要关注界面应该是什么样子的，而不需要关注具体的 DOM 操作，简化了开发过程。
  - 高效更新：通过使用虚拟 DOM 和 diff 算法，React 能够高效地更新页面，只更新变化的部分，减少了不必要的 DOM 操作，提升了性能。
  - 生态丰富：React 拥有庞大的生态系统，有许多第三方库和工具可供选择，例如 React Router 用于路由管理、Redux 用于状态管理等，可以快速构建复杂的应用程序。
-
 ## 类组件和函数组件
   ### 类组件
   - 类组件是使用 ES6 类语法定义的组件。它们继承自 React.Component 类。
@@ -49,7 +48,7 @@ categories:
 ## 什么是jsx
   - JSX（JavaScript XML）是一种在 JavaScript 代码中编写类似 HTML 结构的语法扩展
   ### 如何使用？
-  - 在项目中使用 React 库：在你的项目中引入 React 库，可以使用 npm 或者在 HTML 页面中通过 <script> 标签引入 React 库。
+  - 在项目中使用 React 库：在你的项目中引入 React 库，可以使用 npm 或者在 HTML 页面中通过 <script></script> 标签引入 React 库。
   - 编写 JSX 代码：在 JavaScript 文件中，你可以使用 JSX 语法编写组件的结构。JSX 代码看起来类似于 HTML，但它实际上是 JavaScript 代码。
 
 ## React 中的状态（state）和属性（props）有什么区别？
@@ -122,5 +121,4 @@ categories:
         {/* 使用共享的数据 */}
       )}
     </MyContext.Consumer>
-
    ```

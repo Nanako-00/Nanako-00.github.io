@@ -30,13 +30,13 @@ categories:
   - 将下面三个指令走一遍
   ```shell
     // 删除这个文件
-    rm-rf .depoly_git
+    rm -rf .depoly_git
 
     // 将git加入系统环境变量
     git config --global core.autocrlf false
 
     // 重新执行一键三连
-    hexo c hexo g hexo d
+    hexo clean&&hexo g&&hexo d
   ```
 
 ## 解决方案03
