@@ -59,6 +59,10 @@
       link: https://v3.umijs.org/zh-CN
       avatar: https://img.alicdn.com/tfs/TB1YHEpwUT1gK0jSZFhXXaAtVXa-28-27.svg
       descr: 插件化的企业级前端应用框架。
+    - name: Node.js入门
+      link: https://rualc.me/frontend/nodejs-basic/
+      avatar: https://rualc.me/js-nation-square-blue.png
+      descr: Node.js 入门指南
 - class_name: 组件库
   class_desc:
   link_list:
