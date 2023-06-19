@@ -122,3 +122,10 @@
       link: https://lanhuapp.com/dashboard/#/item?fid=all
       avatar: https://oms-files.oss-cn-beijing.aliyuncs.com/arti…d041cd5-36b1-4fa6-be48-1c57ddb6f5c8-WechatIM.jpeg
       descr: 蓝湖是一款产品文档和设计图的共享平台，帮助互联网团队更好地管理文档和设计图。
+- class_name: 项目收集
+  class_desc: 前端开源项目收集
+  link_list:
+    - name: 视觉效果集合
+      link: https://github.com/hepengwei/visualization-collection
+      avatar:
+      descr: 一个专注于前端视觉效果的集合应用，包含CSS动效、Canvas动画、人工智能应用等上百个案例
