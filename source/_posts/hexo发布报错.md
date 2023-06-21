@@ -3,6 +3,7 @@ title: hexo 发布报错-spawn failed
 cover: /img/hexo.jpg
 categories:
   - 博客搭建
+  - 问题整理
 ---
 
 由于本人在搭建博客发布时经常遇到问题，所以就记录了下来，希望对你们有所帮助
